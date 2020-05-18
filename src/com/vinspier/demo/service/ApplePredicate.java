@@ -9,6 +9,7 @@ import com.vinspier.demo.model.Apple;
  * @Date: 2020/5/18 9:26
  * @Version V1.0
  **/
+@FunctionalInterface
 public interface ApplePredicate {
     boolean test(Apple apple);
 }

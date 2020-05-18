@@ -30,7 +30,13 @@ public class TestPredicate {
     }
 
     public static void testLambda(){
-
+        List<Apple> apples = new ArrayList<>();
+        apples.add(new Apple("apple2",200,"green") );
+        apples.add(new Apple("apple1",100,"green") );
+        apples.add(new Apple("apple1",160,"red") );
+        apples.add(new Apple("apple1",180,"yellow") );
+        apples = AppleFilter.filter(apples,(Apple apple) -> "red".equals(apple.getColor()));
+        System.out.println(apples.size());
     }
 
 }
