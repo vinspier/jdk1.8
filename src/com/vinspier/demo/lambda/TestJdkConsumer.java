@@ -1,4 +1,4 @@
-package com.vinspier.demo;
+package com.vinspier.demo.lambda;
 
 import java.util.Arrays;
 import java.util.List;
