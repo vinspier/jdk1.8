@@ -93,7 +93,7 @@ public class TestTransaction {
         String traders = transactions.stream().map(t -> t.getTrader().getName())
                 .distinct()
                 .sorted()
-                .collect(joining());
+                .collect(joining(","));
         System.out.println(traders);
     }
 
