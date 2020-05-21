@@ -83,6 +83,18 @@ public class TestDish {
     }
 
     /**
+     * 使用嵌套groupingBy
+     * 实现多级分组
+     * 第二个参数可以接受任意类型的收集器
+     * */
+    public static void testMultiGroupBy1(){
+        Map<Dish.Type,Map<Dish.CaloricLevel,List<Dish>>> dishMap = menus.stream()
+                .collect(groupingBy(Dish::getType,groupingBy(Dish::getCaloricLevel))
+                );
+        dishMap.forEach((key,value) -> System.out.println(key + ":" + value.toString()));
+    }
+
+    /**
      * 计算每一个分类类型下的数量
      * */
     public static void testCountGroupingBy(){
