@@ -17,6 +17,7 @@ import java.util.List;
 public class TestPredicate {
     public static void main(String[] args) {
         testPredicate();
+        testLambda();
     }
 
     public static void testPredicate(){
@@ -26,6 +27,11 @@ public class TestPredicate {
         apples.add(new Apple("apple1",160,"red") );
         apples.add(new Apple("apple1",180,"yellow") );
         apples = AppleFilter.filter(apples,new AppleWeightPredicate());
+
+        // 与上同效果
+//        apples = apples.stream()
+//                .filter(apple -> apple.getWeight() > 100)
+//                .collect(Collectors.toList());
         System.out.println(apples.size());
     }
 
