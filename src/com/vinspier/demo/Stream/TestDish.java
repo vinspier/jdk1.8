@@ -29,7 +29,10 @@ public class TestDish {
     public static void main(String[] args) {
         test1();
         System.out.println("=================================================================");
-        testMultiGroupBy();
+        // testMultiGroupBy();
+        testMultiGroupBy1();
+        System.out.println("=================================================================");
+        testPartitioningBy1();
     }
 
     /**
