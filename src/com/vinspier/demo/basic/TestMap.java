@@ -26,9 +26,14 @@ public class TestMap {
         for (int i = 0; i < 11; i++){
             data.put("" + i,i);
         }
+        // 找到不为空的数组位置 进行添加新数据
         data.put("12",12);
+        // 找到不为空的数组位置 进行替换旧数据
+        // 1、链表尾插 2、size > 8 转换成树
         data.put("12",12);
         System.out.println(data.size());
+        // 数据大小超过负载因子 执行扩容机制
+        // 1、创建新数组 2、重新排列数据 a：高低位拆分 b：重整树
         data.put("13",13);
     }
 
