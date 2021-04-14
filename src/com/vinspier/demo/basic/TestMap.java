@@ -38,7 +38,7 @@ public class TestMap {
     }
 
     public void testConcurrentHashMapResize(){
-        Map<String,Integer> data = new ConcurrentHashMap<>(5);
+        ConcurrentHashMap<String,Integer> data = new ConcurrentHashMap<>(5);
         CountDownLatch countDownLatch = new CountDownLatch(10);
         for (int i = 0; i < size; i++){
             final int key = i;
